@@ -1,16 +1,14 @@
-// task imported from martysen GitHub
+// task imported from martysen GitHub, modified during class
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
 const Task = (props) => {
   return (
     <View style={styles.item}>
-      {/* Test and see props are being recieved */}
-      {/* <Text>This is a {props.text}</Text> */}
       <View style={styles.itemLeft}>
-        <View style={styles.squareIcon}>
-          <Text style={styles.itemText}></Text>
-        </View>
+        <View style={styles.squareIcon}></View>
+        <Text>Task: {props.text}</Text>
+        <Text style={styles.itemText}></Text>
       </View>
       {/* View for custom icon to the right   */}
       <View style={styles.circularIcon}></View>

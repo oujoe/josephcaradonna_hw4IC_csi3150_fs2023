@@ -1,4 +1,4 @@
-// base code imported from martysen GitHub
+// base code imported from martysen GitHub, modified during class
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -17,7 +17,7 @@ import React, { useState } from "react";
 import Task from "./components/Task";
 
 export default function App() {
-  // State management for receiving the task input from users from the UI
+  // State management for recieving the task input from users from the UI
   const [task, setTask] = useState();
 
   // state to persistently store the tasks  in an array that user adds to the app
@@ -53,6 +53,10 @@ export default function App() {
 
         {/* Container to show all todo items */}
         <View style={styles.items}>
+          {/* render your task components below - create a reusable component in components sub-directory  */}
+          {/* Test that props passing is working */}
+          {/*<Task text={"This is task 1"} />*/}
+
           {/* Iterate over the taskItems array state which stores all the tasks and pass it as props to Task component */}
           {taskItems.map((item, index) => {
             return (
@@ -73,8 +77,8 @@ export default function App() {
         {/* UI text input for user to type into */}
         <TextInput
           style={styles.input}
-          placeholder={"Add To-Do Items Here"}
-          value={text}
+          placeholder={"Add ToDo Items Here"}
+          value={task}
           onChangeText={(text) => setTask(text)}
         />
 
